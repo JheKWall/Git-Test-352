@@ -17,6 +17,11 @@ namespace Classwork_2___Getting_Into_Git___JKW___352
             return rand.Next(0, 100);
         }
 
+        public int userNumStatus()
+        {
+
+        }
+
         public int NumGuesses = 0;
         public int RandNum;
         public int UserNum;
