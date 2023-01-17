@@ -10,6 +10,8 @@ namespace Classwork_2___Getting_Into_Git___JKW___352
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello World!");
+            Console.ReadKey();
         }
     }
 }
