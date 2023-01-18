@@ -15,7 +15,7 @@ namespace Classwork_2___Getting_Into_Git___JKW___352
             Random rand = new Random();
 
             // Return Random Number Between 0-100
-            RandNum = rand.Next(0, 100);
+            RandNum = rand.Next(MinRange, MaxRange);
         }
 
         //Informs user if their guess is higher, lower, or is right
@@ -53,6 +53,8 @@ namespace Classwork_2___Getting_Into_Git___JKW___352
         public int NumGuesses = 0;
         public int RandNum;
         public int UserNum;
+        public int MinRange;
+        public int MaxRange;
 
         public bool IsRight = false;
 
@@ -61,11 +63,17 @@ namespace Classwork_2___Getting_Into_Git___JKW___352
             //Program thingy
             Program p = new Program();
 
+            //Promt user for guessing range
+            Console.WriteLine("Give me the smallest number you can think of!");
+            p.MinRange = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Give me the largest number you can think of!");
+            p.MaxRange = Convert.ToInt32(Console.ReadLine());
+
             //Generate Random Num
             p.generateRandomInt();
 
             //Prompt user for an input
-            Console.WriteLine("Guess a number from 0-100... Only number inputs are allowed, dont you dare try anything else!\n");
+            Console.WriteLine("Guess a number from " + p.MinRange + " to " + p.MaxRange + "... Only number inputs are allowed, dont you dare try anything else!\n");
             p.UserNum = Convert.ToInt32(Console.ReadLine());
 
             //Loops prompt if the user hasn't guessed the right number
